@@ -31,8 +31,7 @@ The system implements a high-fidelity audit and investigation pipeline:
     ```bash
     terraform init
     terraform apply -auto-approve
-    
-```
+    ```
 
 ## Verification & Testing
 
@@ -42,16 +41,14 @@ To test the forensic auditing pipeline:
     ```bash
     awslocal cloudtrail describe-trails
     aws cloudtrail describe-trails
-    
-```
+    ```
 
 2.  **Confirm Log Delivery:**
     Check that CloudTrail has started writing logs to S3:
     ```bash
     awslocal s3 ls s3://sysops-audit-logs-bucket --recursive
     aws s3 ls s3://sysops-audit-logs-bucket --recursive
-    
-```
+    ```
 
 3.  **Execute a Forensic Query (Conceptual):**
     In Athena, you would create a table and then run a query like:
@@ -67,8 +64,7 @@ To test the forensic auditing pipeline:
     ```bash
     awslocal s3 ls s3://sysops-athena-results-bucket --recursive
     aws s3 ls s3://sysops-athena-results-bucket --recursive
-    
-```
+    ```
 
 ## Cleanup
 
